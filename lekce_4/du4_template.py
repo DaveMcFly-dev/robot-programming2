@@ -5,8 +5,8 @@ class Pocitadlo_tiku():
     def __init__(self):
         self._pocet_levy = 0
         self._pocet_pravy = 0
-        self._posledni_leva = 0
-        self._posledni_prava = 0
+        self._posledni_leva = pin14.read_digital()
+        self._posledni_prava = pin15.read_digital()
         
     def pocet(self, strana, data):
         if strana == "leva":
